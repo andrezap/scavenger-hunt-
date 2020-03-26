@@ -1,0 +1,7 @@
+{
+  "name": "scavender-hunt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
