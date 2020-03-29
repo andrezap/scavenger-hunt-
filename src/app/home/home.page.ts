@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  private logo = 'assets/img/logo.png';
+  public logo = 'assets/img/logo.png';
 
   constructor(private router: Router) {}
 

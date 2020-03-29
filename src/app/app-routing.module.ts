@@ -6,7 +6,11 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: 'q1',
-    loadChildren: () => import('./q1/q1.module').then( m => m.Q1PageModule)
+    loadChildren: () => import('./modules/q1/q1.module').then( m => m.Q1PageModule)
+  },
+  {
+    path: 'q2',
+    loadChildren: () => import('./modules/q2/q2.module').then( m => m.Q2PageModule)
   },
 ];
 
