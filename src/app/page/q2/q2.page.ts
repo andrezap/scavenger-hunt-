@@ -8,7 +8,7 @@ import {QuestionComponent} from '../../components/question/question.component';
 })
 export class Q2Page extends QuestionComponent {
 
-    private streetName = 'NAME 2';
+    private streetName = 'PARLIMENT ST. #2';
     private questionNumber = 'q2';
-    private nextQuestionNumber = 'q2';
+    private nextQuestionNumber = 'q3';
 }

@@ -11,8 +11,4 @@ export class Q1Page extends QuestionComponent {
     private streetName = 'PARLIMENT ST. #1';
     private questionNumber = 'q1';
     private nextQuestionNumber = 'q2';
-
-    public goToNextQuestion(): void {
-        this.router.navigate(['q2']);
-    }
 }
