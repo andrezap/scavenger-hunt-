@@ -14,6 +14,8 @@ export class RankingPage implements OnInit {
     }
 
     ngOnInit(): void {
-        this.total = this.pointsService.total();
+        this.pointsService.total().then((data: any) => {
+            this.total = data.value;
+        });
     }
 }

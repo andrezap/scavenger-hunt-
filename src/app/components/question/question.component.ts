@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ImageService} from '../../shared/images/image.service';
 import {CorrectnessService} from '../../shared/questions/correctness.service';
 import {Router} from '@angular/router';
@@ -17,11 +17,13 @@ export class QuestionComponent implements OnInit {
     @Input() quantityOfImages: number;
     @Input() sentence: string;
 
+    @Output() clickedAnswerEvent = new EventEmitter<boolean>();
+
     private NOT_FOUND = -1;
     private imgs = [];
 
     private correctAnswers = [];
-    private clickedAnswers = [];
+    public clickedAnswers = [];
 
     constructor(
         private imageService: ImageService,
@@ -36,9 +38,14 @@ export class QuestionComponent implements OnInit {
         this.correctAnswers = this.correctnessService.correctAnswer(this.question);
     }
 
+    ionViewDidEnter() {
+        this.clickedAnswers = [];
+    }
+
     public clickAnswer(index: number): void {
         if (!this.clicked(index)) {
             this.clickedAnswers.push(index);
+            this.clickedAnswerEvent.emit(true);
 
             if (this.isCorrect(index)) {
                 this.pointsService.countRightAnswer();

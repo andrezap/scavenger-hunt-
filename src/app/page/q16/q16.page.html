@@ -1,0 +1,11 @@
+<ion-content>
+    <app-question (clickedAnswerEvent)="receiveClickedEvent($event)"
+                  [street]="streetName"
+                  [question]="questionNumber"
+                  [nextQuestion]="nextQuestionNumber">
+    </app-question>
+    <ion-button [hidden]="hideBackBtn" (click)="returnQuestion()" fill="clear" color="primary">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+    </ion-button>
+</ion-content>

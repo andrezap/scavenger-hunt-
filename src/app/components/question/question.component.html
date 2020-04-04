@@ -1,9 +1,5 @@
+<h2 class="ion-text-center">{{street}}</h2>
 <ion-grid>
-    <ion-row class="ion-align-items-center">
-        <ion-col>
-            <div class="ion-text-center">{{street}}</div>
-        </ion-col>
-    </ion-row>
     <ion-row class="ion-align-items-center">
         <ion-col size="4" *ngFor="let img of imgs; let i = index;">
             <ion-item (click)="clickAnswer(i)" [color]="color(i)" lines="none">

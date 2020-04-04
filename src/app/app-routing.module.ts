@@ -108,6 +108,10 @@ const routes: Routes = [
         path: 'ranking',
         loadChildren: () => import('./page/ranking/ranking.module').then(m => m.RankingPageModule)
     },
+  {
+    path: 'change-route',
+    loadChildren: () => import('./page/change-route/change-route.module').then( m => m.ChangeRoutePageModule)
+  },
 ];
 
 @NgModule({
