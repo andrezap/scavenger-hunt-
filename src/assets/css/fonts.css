@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'BalooThambi';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../font/BalooThambi2-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'BalooThambi';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../font/BalooThambi2-Bold.ttf');
+}

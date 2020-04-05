@@ -15,7 +15,8 @@ export class QuestionComponent implements OnInit {
     @Input() question: string;
     @Input() nextQuestion: string;
     @Input() quantityOfImages: number;
-    @Input() sentence: string;
+    @Input() sentence = null;
+    @Input() size = 4;
 
     @Output() clickedAnswerEvent = new EventEmitter<boolean>();
 
@@ -64,10 +65,13 @@ export class QuestionComponent implements OnInit {
     }
 
     public color(index: number): string {
-        if (this.clicked(index) && this.isCorrect(index)) {
-            return 'secondary';
+        if (this.clicked(index)) {
+            if (this.isCorrect(index)) {
+                return 'success';
+            } else {
+                return 'danger';
+            }
         }
-
         return '';
     }
 

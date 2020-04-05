@@ -1,17 +1,28 @@
-<h2 class="ion-text-center">{{street}}</h2>
+<ion-grid>
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col class="ion-align-items-center">
+            <ion-label><h2 class="title ion-text-center">{{street}}</h2></ion-label>
+        </ion-col>
+        <ion-col class="ion-align-items-end">
+            <ion-button  class="next-page-btn" (click)="goToNextQuestion()" fill="clear" color="secondary">
+                Next
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-grid>
 <ion-grid>
     <ion-row class="ion-align-items-center">
-        <ion-col size="4" *ngFor="let img of imgs; let i = index;">
-            <ion-item (click)="clickAnswer(i)" [color]="color(i)" lines="none">
-                <ion-img [src]="img"></ion-img>
+        <ion-col class="ion-align-items-center" [size]="size" *ngFor="let img of imgs; let i = index;">
+            <ion-item class="ion-align-items-center" (click)="clickAnswer(i)" [color]="color(i)" lines="none">
+                <img class="question-imgs" [src]="img"/>
             </ion-item>
         </ion-col>
     </ion-row>
-    <ion-row>
-        {{sentence}}
+    <ion-row *ngIf="sentence !== null">
+        <ion-col>
+            <h2 class="sentence">{{sentence}}</h2>
+        </ion-col>
     </ion-row>
 </ion-grid>
-<ion-button (click)="goToNextQuestion()" class="next-page-btn" fill="clear" color="primary">
-    Next
-    <ion-icon name="chevron-forward-outline"></ion-icon>
-</ion-button>

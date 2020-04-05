@@ -11,18 +11,6 @@
 
 /* Core CSS required for Ionic components to work properly */
 
-#container {
-	text-align: center;
-	position: absolute;
-	left: 0;
-	right: 0;
-}
-
-.next-page-btn {
-	position: absolute;
-	right: 0;
-}
-
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
@@ -37,3 +25,6 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "assets/css/fonts.css";
+@import "assets/css/main";
