@@ -8,7 +8,7 @@ import {QuestionComponent} from '../../components/question/question.component';
 })
 export class Q3Page extends QuestionComponent {
 
-    private streetName = 'PARLIMENT ST. - MULT. CHOICE';
+    private streetName = 'PARLIMENT ST.';
     private questionNumber = 'q3';
     private nextQuestionNumber = 'q4';
     private questionSentence = 'TAP the picture that was once one of our oldest jails, but now a library?';

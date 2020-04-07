@@ -8,8 +8,8 @@ import {Router} from '@angular/router';
 })
 export class ChangeRoutePage implements OnInit {
 
-    private nextQuestionA = 'q16';
-    private nextQuestionB = 'q21';
+    private nextQuestionA = 'q21';
+    private nextQuestionB = 'q16';
 
     constructor(public router: Router) {
     }

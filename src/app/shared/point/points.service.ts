@@ -13,7 +13,7 @@ export class PointsService {
         this.storage.getString('points').then((data: any) => {
             const point = Number(data.value) + 1;
             this.storage.setString('points', point.toString());
-        });
+        }).catch((e) => console.log(e));
     }
 
     countWrongAnswer() {
@@ -23,10 +23,8 @@ export class PointsService {
         });
     }
 
-    start() {
-        this.storage.clear().then(() => {
-            this.storage.setString('points', '0');
-        });
+    async start() {
+         await this.storage.setString('points', '0');
     }
 
     total() {

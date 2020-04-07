@@ -15,7 +15,7 @@ export class HomePage {
     }
 
     public start() {
-        this.pointService.start();
-        this.router.navigate(['q1']);
+        // this.pointService.start();
+        this.router.navigate(   ['q1']);
     }
 }

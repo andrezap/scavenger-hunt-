@@ -8,7 +8,7 @@ import {QuestionComponent} from '../../components/question/question.component';
 })
 export class Q6Page extends QuestionComponent {
 
-    private streetName = 'SHIRLEY ST. - MULT CHOICE #1';
+    private streetName = 'SHIRLEY ST. #1';
     private questionNumber = 'q6';
     private nextQuestionNumber = 'q7';
     private questionSentence = 'TAP the church tower that belongs to the oldest church on the island.';

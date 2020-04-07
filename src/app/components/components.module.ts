@@ -2,14 +2,16 @@ import {NgModule} from '@angular/core';
 import {QuestionComponent} from './question/question.component';
 import {IonicModule} from '@ionic/angular';
 import {CommonModule} from '@angular/common';
+import {QuestionTextAlternativeComponent} from './question-text-alternative/question-text-alternative.component';
 
 @NgModule({
-    declarations: [QuestionComponent],
+    declarations: [QuestionComponent, QuestionTextAlternativeComponent],
     imports: [
         IonicModule,
         CommonModule
     ],
-    exports: [QuestionComponent]
+    exports: [QuestionComponent, QuestionTextAlternativeComponent]
 })
 
-export class ComponentsModule {}
+export class ComponentsModule {
+}

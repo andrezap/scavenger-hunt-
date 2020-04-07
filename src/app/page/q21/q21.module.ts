@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Q10PageRoutingModule } from './q10-routing.module';
+import { Q21PageRoutingModule } from './q21-routing.module';
 
-import { Q10Page } from './q10.page';
-import {ComponentsModule} from '../../components/components.module';
+import { Q21Page } from './q21.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Q10PageRoutingModule,
-    ComponentsModule
+    Q21PageRoutingModule
   ],
-  declarations: [Q10Page]
+  declarations: [Q21Page]
 })
-export class Q10PageModule {}
+export class Q21PageModule {}

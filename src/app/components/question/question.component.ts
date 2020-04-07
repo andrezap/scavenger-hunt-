@@ -39,10 +39,6 @@ export class QuestionComponent implements OnInit {
         this.correctAnswers = this.correctnessService.correctAnswer(this.question);
     }
 
-    ionViewDidEnter() {
-        this.clickedAnswers = [];
-    }
-
     public clickAnswer(index: number): void {
         if (!this.clicked(index)) {
             this.clickedAnswers.push(index);
