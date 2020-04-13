@@ -18,4 +18,8 @@ export class RouteService {
     currentRoute() {
         return this.storage.getString(this.ROUTE_KEY);
     }
+
+    async start() {
+        await this.storage.clear();
+    }
 }

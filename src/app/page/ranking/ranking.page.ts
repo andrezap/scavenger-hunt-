@@ -9,14 +9,23 @@ import {PointsService} from '../../shared/point/points.service';
 export class RankingPage implements OnInit {
 
     private total;
+    private totalRight;
+    private totalWrong;
 
     constructor(private pointsService: PointsService) {
     }
 
     ngOnInit(): void {
-        this.pointsService.
-        total().then((data: any) => {
+        this.pointsService.total().then((data: any) => {
             this.total = data.value;
+        });
+
+        this.pointsService.totalRight().then(data => {
+            this.totalRight = data.value;
+        });
+
+        this.pointsService.totalWrong().then(data => {
+            this.totalWrong = data.value;
         });
     }
 }

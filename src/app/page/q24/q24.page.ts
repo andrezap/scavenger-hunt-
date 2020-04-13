@@ -8,26 +8,9 @@ import {QuestionComponent} from '../../components/question/question.component';
 })
 export class Q24Page extends QuestionComponent implements OnInit {
 
-    private streetName = 'WEST ST.';
+    private streetName = 'WEST BAY ST. #3';
     private questionNumber = 'q24';
-    private nextQuestionNumber;
-    private questionSentence = 'TAP the picture that represents the Junkanoo Museum.';
+    private nextQuestionNumber = 'ranking';
+    private questionSentence = 'TAP the picture of the 3 billion dollar Chinese funded resort.';
     private qntOfImages = 2;
-
-    ngOnInit() {
-        super.ngOnInit();
-        this.getNextQuestion();
-    }
-
-    private getNextQuestion(): void {
-        this.routeService.currentRoute().then(data => {
-            const currentRoute = data.value;
-            if (currentRoute === 'A') {
-                this.nextQuestionNumber = 'ranking';
-            }
-            if (currentRoute === 'B') {
-                this.nextQuestionNumber = 'q25';
-            }
-        });
-    }
 }

@@ -9,6 +9,6 @@ import {QuestionComponent} from '../../components/question/question.component';
 export class Q23Page extends QuestionComponent implements OnInit {
 
   private streetName = 'WEST BAY ST. #2';
-  private questionNumber = 'q21';
-  private nextQuestionNumber = 'q22';
+  private questionNumber = 'q23';
+  private nextQuestionNumber = 'q24';
 }

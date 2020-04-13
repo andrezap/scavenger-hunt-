@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {PointsService} from './shared/point/points.service';
+import {RouteService} from './shared/route/route.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private pointsService: PointsService
+    private pointsService: PointsService,
+    private routeService: RouteService
   ) {
     this.initializeApp();
   }
@@ -25,6 +27,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.pointsService.start();
+      this.routeService.start();
     });
   }
 }

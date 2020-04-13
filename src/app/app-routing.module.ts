@@ -101,10 +101,6 @@ const routes: Routes = [
         loadChildren: () => import('./page/q24/q24.module').then(m => m.Q24PageModule)
     },
     {
-        path: 'q25',
-        loadChildren: () => import('./page/q25/q25.module').then(m => m.Q25PageModule)
-    },
-    {
         path: 'ranking',
         loadChildren: () => import('./page/ranking/ranking.module').then(m => m.RankingPageModule)
     },
