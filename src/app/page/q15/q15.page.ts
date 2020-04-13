@@ -7,9 +7,9 @@ import {QuestionComponent} from '../../components/question/question.component';
     styleUrls: ['./q15.page.scss'],
 })
 export class Q15Page extends QuestionComponent {
-    private streetName = 'GIBBS/MARCUS BETHEL WAY – MULT. CHOICE';
+    private streetName = 'GIBBS/MARCUS BETHEL WAY';
     private questionNumber = 'q15';
-    private nextQuestionNumber = 'change-route';
+    private nextQuestionNumber = 'q21';
     private questionSentence = 'TAP the picture of the Guard House at Fort Charlotte.';
     private qntOfImages = 2;
 }

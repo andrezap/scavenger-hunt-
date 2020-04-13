@@ -10,5 +10,5 @@ export class Q8Page extends QuestionComponent {
 
     private streetName = 'WEST HILL ST. #1';
     private questionNumber = 'q8';
-    private nextQuestionNumber = 'q9';
+    private nextQuestionNumber = 'change-route';
 }

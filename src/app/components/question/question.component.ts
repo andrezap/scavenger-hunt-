@@ -3,6 +3,7 @@ import {ImageService} from '../../shared/images/image.service';
 import {CorrectnessService} from '../../shared/questions/correctness.service';
 import {Router} from '@angular/router';
 import {PointsService} from '../../shared/point/points.service';
+import {RouteService} from '../../shared/route/route.service';
 
 @Component({
     selector: 'app-question',
@@ -30,7 +31,8 @@ export class QuestionComponent implements OnInit {
         private imageService: ImageService,
         private correctnessService: CorrectnessService,
         public router: Router,
-        private pointsService: PointsService
+        private pointsService: PointsService,
+        public routeService: RouteService
     ) {
     }
 

@@ -6,28 +6,30 @@ import {StorageService} from '../service/storage.service';
 })
 export class PointsService {
 
+    private POINT_KEY = 'points';
+
     constructor(private storage: StorageService) {
     }
 
     countRightAnswer() {
-        this.storage.getString('points').then((data: any) => {
+        this.storage.getString(this.POINT_KEY).then((data: any) => {
             const point = Number(data.value) + 1;
-            this.storage.setString('points', point.toString());
+            this.storage.setString(this.POINT_KEY, point.toString());
         }).catch((e) => console.log(e));
     }
 
     countWrongAnswer() {
-        this.storage.getString('points').then((data: any) => {
+        this.storage.getString(this.POINT_KEY).then((data: any) => {
             const point = Number(data.value) - 1;
-            this.storage.setString('points', point.toString());
+            this.storage.setString(this.POINT_KEY, point.toString());
         });
     }
 
     async start() {
-         await this.storage.setString('points', '0');
+        await this.storage.setString(this.POINT_KEY, '0');
     }
 
     total() {
-        return this.storage.getString('points');
+        return this.storage.getString(this.POINT_KEY);
     }
 }

@@ -11,7 +11,7 @@ export class Q10Page extends QuestionTextAlternativeComponent {
     private streetName = 'WEST HILL ST. - MULT. CHOICE';
     private questionNumber = 'q10';
     private nextQuestionNumber = 'q11';
-    private questionSentence = 'True or False – Graycliff is home to the ruins of the oldest church built in the Bahamas and houses up to 250,000 bottles of wine?';
+    private questionSentence = 'Graycliff is home to the ruins of the oldest church built in the Bahamas and houses up to 250,000 bottles of wine';
     private qntOfImages = 2;
     private alternativesArr = ['TRUE', 'FALSE'];
 }

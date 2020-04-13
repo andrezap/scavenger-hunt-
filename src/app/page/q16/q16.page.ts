@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {QuestionComponent} from '../../components/question/question.component';
 
 @Component({
@@ -6,7 +6,7 @@ import {QuestionComponent} from '../../components/question/question.component';
     templateUrl: './q16.page.html',
     styleUrls: ['./q16.page.scss'],
 })
-export class Q16Page extends QuestionComponent {
+export class Q16Page extends QuestionComponent implements OnInit {
     private streetName = 'CUMBERLAND ST.';
     private questionNumber = 'q16';
     private nextQuestionNumber = 'q17';
@@ -17,7 +17,8 @@ export class Q16Page extends QuestionComponent {
         return this.hideBackBtn;
     }
 
-    private returnQuestion(): void {
-        this.router.navigate(['/change-route']);
-    }
+    //
+    // private returnQuestion(): void {
+    //     this.router.navigate(['/change-route']);
+    // }
 }

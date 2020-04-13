@@ -8,10 +8,9 @@ import {QuestionComponent} from '../../components/question/question.component';
 })
 export class Q12Page extends QuestionComponent {
 
-    private streetName = 'WEST ST. - MULT. CHOICE';
+    private streetName = 'WEST ST.';
     private questionNumber = 'q12';
     private nextQuestionNumber = 'q13';
     private questionSentence = 'TAP the picture that represents the Junkanoo Museum.';
     private qntOfImages = 2;
-
 }
