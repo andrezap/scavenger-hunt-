@@ -8,7 +8,7 @@ import {QuestionTextAlternativeComponent} from '../../components/question-text-a
 })
 export class Q10Page extends QuestionTextAlternativeComponent {
 
-    private streetName = 'WEST HILL ST. - MULT. CHOICE';
+    private streetName = 'WEST HILL ST';
     private questionNumber = 'q10';
     private nextQuestionNumber = 'q11';
     private questionSentence = 'Graycliff is home to the ruins of the oldest church built in the Bahamas and houses up to 250,000 bottles of wine';

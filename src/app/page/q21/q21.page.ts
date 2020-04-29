@@ -10,5 +10,28 @@ export class Q21Page extends QuestionComponent implements OnInit {
 
     private streetName = 'WEST BAY ST. #2';
     private questionNumber = 'q21';
-    private nextQuestionNumber = 'q22';
+    private nextQuestionNumber;
+
+    ngOnInit() {
+        super.ngOnInit();
+        this.getNextQuestion();
+    }
+
+    private getNextQuestion(): void {
+        this.routeService.currentRoute().then(data => {
+            if (data.value === null) {
+                this.activeRoute.queryParams.subscribe(params => {
+                    this.nextQuestionNumber = params.lastPage;
+                });
+            }
+            const currentRoute = data.value;
+            if (currentRoute === 'A') {
+                this.nextQuestionNumber = 'q23';
+            }
+
+            if (currentRoute === 'B') {
+                this.nextQuestionNumber = 'q22';
+            }
+        });
+    }
 }

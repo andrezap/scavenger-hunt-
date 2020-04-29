@@ -16,9 +16,4 @@ export class Q16Page extends QuestionComponent implements OnInit {
         this.hideBackBtn = $event;
         return this.hideBackBtn;
     }
-
-    //
-    // private returnQuestion(): void {
-    //     this.router.navigate(['/change-route']);
-    // }
 }

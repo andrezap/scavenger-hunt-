@@ -17,7 +17,6 @@ export class HomePage implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        this.pointService.start();
     }
 
     ngAfterViewInit() {
@@ -30,6 +29,7 @@ export class HomePage implements OnInit, AfterViewInit {
     }
 
     public start() {
+        this.pointService.start();
         this.router.navigate(['q1']);
     }
 }

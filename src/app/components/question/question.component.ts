@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ImageService} from '../../shared/images/image.service';
 import {CorrectnessService} from '../../shared/questions/correctness.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, NavigationExtras, Router} from '@angular/router';
 import {PointsService} from '../../shared/point/points.service';
 import {RouteService} from '../../shared/route/route.service';
 
@@ -32,7 +32,8 @@ export class QuestionComponent implements OnInit {
         private correctnessService: CorrectnessService,
         public router: Router,
         private pointsService: PointsService,
-        public routeService: RouteService
+        public routeService: RouteService,
+        public activeRoute: ActivatedRoute
     ) {
     }
 
@@ -74,7 +75,13 @@ export class QuestionComponent implements OnInit {
     }
 
     public goToNextQuestion(): void {
+        const navigationExtras: NavigationExtras = {
+            queryParams: {
+                lastPage: this.question
+            }
+        };
+
         const page = '/' + this.nextQuestion;
-        this.router.navigate([page]);
+        this.router.navigate([page], navigationExtras);
     }
 }
