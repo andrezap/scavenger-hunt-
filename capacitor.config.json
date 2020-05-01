@@ -1,5 +1,5 @@
 {
-  "appId": "io.ionic.starter",
+  "appId": "br.andrezap.scavenderhunt",
   "appName": "scavender-hunt",
   "bundledWebRuntime": false,
   "npmClient": "npm",
