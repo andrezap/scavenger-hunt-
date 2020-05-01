@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {PointsService} from '../../shared/point/points.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-ranking',
@@ -12,7 +13,7 @@ export class RankingPage implements OnInit {
     private totalRight;
     private totalWrong;
 
-    constructor(private pointsService: PointsService) {
+    constructor(private pointsService: PointsService, public router: Router) {
     }
 
     ngOnInit(): void {
@@ -27,5 +28,9 @@ export class RankingPage implements OnInit {
         this.pointsService.totalWrong().then(data => {
             this.totalWrong = data.value;
         });
+    }
+
+    restart() : void{
+        this.router.navigate(['/home']);
     }
 }
